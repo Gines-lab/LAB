@@ -2,5 +2,7 @@
 using System.Drawing;
 
 
-Console.BackgroundColor = ConsoleColor.Blue;
-Console.Write("Hola, World!");
+// Texto o comentario es este simbolo
+Console.Write("Congratulations!");
+Console.Write(" ");
+Console.Write("You wrote your first lines of code.");
