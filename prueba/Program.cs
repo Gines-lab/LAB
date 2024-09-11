@@ -1,6 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Text;
+
+// See https://aka.ms/new-console-template for more information
 using System.Drawing;
-using System.Text;
+
 
 
 // Texto o comentario es este simbolo
