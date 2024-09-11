@@ -28,4 +28,4 @@ Console.Write(" messages in your inbox. The temperature is ");
 Console.Write(temperature);
 Console.WriteLine(" celsius.");
 
-Console.WriteLine("Hello, " + name + "! You have " + messages + " messages in your inbox. The temperature is " + temperature);
+Console.WriteLine("Hello, " + name + "! You have " + messages + " messages in your inbox. The temperature is " + temperature +" celsius.");
