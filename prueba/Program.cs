@@ -14,3 +14,6 @@ Console.WriteLine(123);
 
 Console.WriteLine("true");
 Console.WriteLine(true);
+
+string firstName = "Bob";
+Console.WriteLine(firstName);
