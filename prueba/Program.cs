@@ -65,12 +65,28 @@ string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\
 string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
 Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
 
+
+// Ejercicio de Matematicas
+Console.Clear();
+Console.WriteLine(Environment.NewLine+"##################################################");
+Console.WriteLine("##########   Ejercicio de Matematicas  ###########");
+Console.WriteLine("##################################################");
 int firstNumber = 10;
 int secondNumber = 7;
 
-Console.Clear();
 Console.WriteLine( "Resultado de suma  " + (firstNumber + secondNumber));
 Console.WriteLine( "Resultado de resta  " + (firstNumber - secondNumber));
 Console.WriteLine( "Resultado de multiplicar  " + (firstNumber * secondNumber));
 Console.WriteLine( "Resultado de dividir  " + (firstNumber / secondNumber));
 Console.WriteLine( "Resultado de decimal  " + (firstNumber /(decimal) secondNumber));
+
+// Temperatura
+int fahrenheit = 94;
+decimal celsius = (fahrenheit - 32m) * (5m / 9m);
+Console.WriteLine(Environment.NewLine+"##################################################");
+Console.WriteLine("##########   Ejercicio de temperatura  ###########");
+Console.WriteLine("##################################################");
+Console.WriteLine("The temperature is " + celsius + " Celsius.");
+Console.WriteLine(Environment.NewLine+"");
+
+
