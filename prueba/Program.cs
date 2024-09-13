@@ -68,29 +68,29 @@ Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
 
 // Ejercicio de Matematicas
 Console.Clear();
-Console.WriteLine(Environment.NewLine+"############################################################");
+Console.WriteLine(Environment.NewLine + "############################################################");
 Console.WriteLine("##########   Ejercicio de Matematicas  #####################");
 Console.WriteLine("############################################################");
 int firstNumber = 10;
 int secondNumber = 7;
 
-Console.WriteLine( "Resultado de suma  " + (firstNumber + secondNumber));
-Console.WriteLine( "Resultado de resta  " + (firstNumber - secondNumber));
-Console.WriteLine( "Resultado de multiplicar  " + (firstNumber * secondNumber));
-Console.WriteLine( "Resultado de dividir  " + (firstNumber / secondNumber));
-Console.WriteLine( "Resultado de decimal  " + (firstNumber /(decimal) secondNumber));
+Console.WriteLine("Resultado de suma  " + (firstNumber + secondNumber));
+Console.WriteLine("Resultado de resta  " + (firstNumber - secondNumber));
+Console.WriteLine("Resultado de multiplicar  " + (firstNumber * secondNumber));
+Console.WriteLine("Resultado de dividir  " + (firstNumber / secondNumber));
+Console.WriteLine("Resultado de decimal  " + (firstNumber / (decimal)secondNumber));
 
 // Temperatura
 int fahrenheit = 94;
 decimal celsius = (fahrenheit - 32m) * (5m / 9m);
-Console.WriteLine(Environment.NewLine+"############################################################");
+Console.WriteLine(Environment.NewLine + "############################################################");
 Console.WriteLine("##########   Ejercicio de temperatura  #####################");
 Console.WriteLine("############################################################");
 Console.WriteLine("The temperature is " + celsius + " Celsius.");
 
 
 // Notas de estudios
-Console.WriteLine(Environment.NewLine+"############################################################");
+Console.WriteLine(Environment.NewLine + "############################################################");
 Console.WriteLine("##########   Notas de estudiantes      #####################");
 Console.WriteLine("############################################################");
 int currentAssignments = 5;
@@ -124,13 +124,61 @@ int nicolasSum = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
 int zahirahSum = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
 int jeongSum = jeong1 + jeong2 + jeong3 + jeong4 + jeong5;
 
-decimal sophiaScore = (decimal) sophiaSum / currentAssignments;
-decimal nicolasScore = (decimal) nicolasSum / currentAssignments;
-decimal zahirahScore = (decimal) zahirahSum / currentAssignments;
-decimal jeongScore = (decimal) jeongSum / currentAssignments;
+decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
+decimal nicolasScore = (decimal)nicolasSum / currentAssignments;
+decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
+decimal jeongScore = (decimal)jeongSum / currentAssignments;
 
 Console.WriteLine("Student\t\tGrade\n");
 Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
 Console.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
 Console.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
 Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
+
+// ###############################################
+
+// Random
+Console.WriteLine(Environment.NewLine + "############################################################");
+Console.WriteLine("##########   Random      #####################");
+Console.WriteLine("############################################################");
+
+
+Random dice = new Random();
+int roll = dice.Next(1, 7);
+Console.WriteLine(roll);
+
+Console.WriteLine(Environment.NewLine + "############################################################");
+Console.WriteLine("##########   Metodo      #####################");
+Console.WriteLine("############################################################");
+
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+largerValue = Math.Max(firstValue, secondValue);
+Console.WriteLine(largerValue);
+
+
+Console.WriteLine(Environment.NewLine + "############################################################");
+Console.WriteLine("##########   IF   Juegon de dados  #####################");
+Console.WriteLine("############################################################");
+
+
+Random dice2 = new Random();
+
+int roll1 = dice2.Next(1, 7);
+int roll2 = dice2.Next(1, 7);
+int roll3 = dice2.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if (total > 10)
+{
+    Console.WriteLine("Tu ganas!");
+}
+
+else
+{
+    Console.WriteLine("Lo siento, tu pierdes.");
+}
