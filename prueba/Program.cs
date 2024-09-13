@@ -177,8 +177,21 @@ if (total > 10)
 {
     Console.WriteLine("Tu ganas!");
 }
-
 else
 {
     Console.WriteLine("Lo siento, tu pierdes.");
+}
+
+
+Console.WriteLine(Environment.NewLine + "############################################################");
+Console.WriteLine("##########   Zorra   #####################");
+Console.WriteLine("############################################################");
+
+string message3 = "The quick brown fox jumps over the lazy dog.";
+bool result = message.Contains("dog");
+Console.WriteLine(result);
+
+if (message3.Contains("fox"))
+{
+    Console.WriteLine("What does the fox say?");
 }
