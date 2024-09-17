@@ -1,28 +1,42 @@
-﻿Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+﻿string permission = "Admin|Manager";
+int level = 30;
 
-if (daysUntilExpiration == 0)
+// Verificamos si el permiso contiene "Admin"
+if (permission.Contains("Admin"))
 {
-    Console.WriteLine("Your subscription has expired.");
+    // Comprobamos el nivel para Admin
+    if (level > 55)
+    {
+        Console.WriteLine("Welcome, Super Admin user.");
+    }
+    else if (level > 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
 }
-else if (daysUntilExpiration == 1)
+// Si el permiso no contiene "Admin", verificamos si contiene "Manager"
+else if (permission.Contains("Manager"))
 {
-    Console.WriteLine("Your subscription expires within a day!");
-    discountPercentage = 20;
+    // Comprobamos el nivel para Manager
+    if (level > 55)
+    {
+        Console.WriteLine("Welcome, Super Admin user.");
+    }
+    else if (level > 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
 }
-else if (daysUntilExpiration <= 5)
+// Si el permiso no contiene ni "Admin" ni "Manager"
+else
 {
-    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
-    discountPercentage = 10;
+    Console.WriteLine("You do not have sufficient privileges.");
 }
-else if (daysUntilExpiration <= 10)
-{
-    Console.WriteLine("Your subscription will expire soon. Renew now!");
-}
-
-if (discountPercentage > 0)
-{
-    Console.WriteLine($"Renew now and save {discountPercentage}%.");
-}
-
