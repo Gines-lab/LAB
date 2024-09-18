@@ -1,42 +1,24 @@
-﻿string permission = "Admin|Manager";
-int level = 30;
+﻿// ############################################################
+// #################### Juego define Rol   ####################
+// ############################################################
 
-// Verificamos si el permiso contiene "Admin"
-if (permission.Contains("Admin"))
+int hero = 10;
+int monster = 10;
+
+Random dice = new Random();
+
+do
 {
-    // Comprobamos el nivel para Admin
-    if (level > 55)
-    {
-        Console.WriteLine("Welcome, Super Admin user.");
-    }
-    else if (level > 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    else
-    {
-        Console.WriteLine("You do not have sufficient privileges.");
-    }
-}
-// Si el permiso no contiene "Admin", verificamos si contiene "Manager"
-else if (permission.Contains("Manager"))
-{
-    // Comprobamos el nivel para Manager
-    if (level > 55)
-    {
-        Console.WriteLine("Welcome, Super Admin user.");
-    }
-    else if (level > 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    else
-    {
-        Console.WriteLine("You do not have sufficient privileges.");
-    }
-}
-// Si el permiso no contiene ni "Admin" ni "Manager"
-else
-{
-    Console.WriteLine("You do not have sufficient privileges.");
-}
+    int roll = dice.Next(1, 11);
+    monster -= roll;
+    Console.WriteLine($"El monstruo recibió daño y perdió {roll} de salud, ahora tiene {monster} de salud.");
+
+    if (monster <= 0) continue;
+
+    roll = dice.Next(1, 11);
+    hero -= roll;
+    Console.WriteLine($"El héroe recibió daño y perdió {roll} de salud, ahora tiene {hero} de salud.");
+
+} while (hero > 0 && monster > 0);
+
+Console.WriteLine(hero > monster ? "¡El héroe gana!" : "¡El monstruo gana!");
