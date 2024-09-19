@@ -1,28 +1,18 @@
-﻿using System;
-using System.Text;
+﻿int value1 = 11; 
+decimal value2 = 6.2m; 
+float value3 = 4.3f; 
 
-class Program
-{
-    static void Main()
-    {
-        string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+// Solución para result1: Dividir value1 entre value2, mostrar el resultado como int
+// Convierte value1 a decimal antes de dividir para evitar problemas de tipos
+int result1 = (int)Math.Round((decimal)value1 / value2); 
+Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
 
-        decimal total = 0m;
-        StringBuilder message = new StringBuilder();
+// Solución para result2: Dividir value2 entre value3, mostrar el resultado como decimal
+// Se realiza la conversión de value3 a decimal antes de la división para evitar pérdida de precisión
+decimal result2 = value2 / (decimal)value3; 
+Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
 
-        foreach (var value in values)
-        {
-            if (decimal.TryParse(value, out decimal number))
-            {
-                total += number;
-            }
-            else
-            {
-                message.Append(value + " ");
-            }
-        }
-
-        Console.WriteLine($"Message: {message.ToString().Trim()}");
-        Console.WriteLine($"Total: {total}");
-    }
-}
+// Solución para result3: Dividir value3 entre value1, mostrar el resultado como float
+// Aseguramos que el tipo sea float durante la división
+float result3 = value3 / value1; 
+Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
