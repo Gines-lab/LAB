@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-string pangram = "The quick brown fox jumps over the lazy dog";
+﻿string pangram = "The quick brown fox jumps over the lazy dog";
 
 // Paso 1 y 3 combinados: Dividimos el string, invertimos cada palabra y las volvemos a juntar en un solo paso
 string result = string.Join(" ", pangram
